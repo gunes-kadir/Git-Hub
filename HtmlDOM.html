@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>JavaScript!</title>
+    <style type="text/css">
+        .intro1 {
+            background-color: red;
+        }
+        .intro2 {
+            background-color: violet
+        }
+        .intro3 {
+            background-color: blue;
+        }
+
+    </style>
+</head>
+<body>
+
+        <p class="intro1" id="intro1">My first paragraph</p>
+        <p class="intro2" id="intro2">My second paragraph</p>
+        <p class="intro3" id="intro3">My third paragraph</p>
+
+        <ul>
+            <li>List item 1</li>
+            <li>List item 2</li>
+            <li>List item 3</li>
+            <li>List item 4</li>
+            <li>List item 5</li>
+        </ul>
+        <p id="message"></p>
+        <input name="customerName" type="text" value="Kadir Gunes" />
+
+        <h1>Try it</h1>
+        <h1 id="tryIt">Try it</h1>
+
+        <p id="nodes">
+            Node value
+        </p>
+            <div id="div1">
+            <p id="p1">
+                This is p1
+            </p>
+        
+                <p id="p2">
+                    This is p2
+                </p>
+            </div>
+            
+            <script type="text/Javascript">
+               // alert("Reading with getElementById");
+            // var firstParagraph = document.getElementById("intro1");
+             //    var message = document.getElementById("message");
+               // message.innerHTML = "Message : " + firstParagraph.innerHTML;
+              
+              // var allUnorderedLists = document.getElementsByTagName("ul");
+               //var unorderedLists = allUnorderedLists[0];
+
+               //var allListItems = unorderedLists.getElementsByTagName("li");
+
+                //for (var i = 0; i < allListItems.length; i++) {
+                  //  alert(allListItems[i].firstChild.data);
+                
+               // }
+               //var allItemsWithClassName = document.getElementsByClassName("intro1");
+               //alert(allItemsWithClassName[0].innerHTML);
+
+              // var allItemsWithSelector = document.querySelectorAll("p.intro2");
+               // alert(allItemsWithSelector[0].innerHTML);
+
+              // var names = document.getElementsByName("customerName");
+               // alert(names[0].value);
+
+               // document.getElementById("tryIt").addEventListener("click",changeColor);
+
+                ///function changeColor() {
+                 //   document.getElementById("intro1").style.background-color = "blue";
+
+               // }
+                //document.getElementById("tryIt").removeEventListener("click",changeColor);
+
+                //var nodeText = document.getElementById("nodes").childNodes[0].nodeValue;
+                //alert(nodeText);
+
+                var heading = document.createElement("h2");
+                var node = document.createTextNode("Hello Javascript");
+                heading.appendChild(node);
+
+                var div1 = document.getElementById("div1");
+                var p2 = document.getElementById("p2");
+                div1.insertBefore(heading, p2);
+
+                alert("Removeing P2");
+                div1.removeChild(p2);
+                
+                alert("Replacing");
+                var heading2 = document.createElement("h1");
+                var node2 = document.createTextNode("This is a replacement");
+                heading2.appendChild(node2);
+
+                var p1 = document.getElementById("p1");
+                div1.replaceChild(heading2, p1);
+
+
+            </script>
+       
+</body>
+</html>
