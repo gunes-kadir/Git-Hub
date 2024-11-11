@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Person(firstName,lastName) {
+            this.firstName = firstName;
+            this.lastName = lastName;
+        }
+
+        function Student(favoriteCourse) {
+            this.favoriteCourse = favoriteCourse;
+
+        }
+
+        Student.prototype = new Person("Kadir", "Gunes");
+        var kadir = new Student("Programming");
+        alert(kadir.firstName + " " + kadir.lastName + " loves " + kadir.favoriteCourse);
+        
+
+    </script>
+</body>
+</html>

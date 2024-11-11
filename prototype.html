@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+ function Customer(first, last, city, country, age) {
+            this.first = first;
+            this.last = last;
+            this.city = city;
+            this.age = age;
+            this.country = country;
+ }
+
+            var someCustomer = new Customer("Kadir", "Gunes", "Istanbul", "Turkey", 30);
+
+            Customer.prototype.eMail = "gunesbirkan08@gmail.com";
+            Customer.prototype.fullName = function () {
+                return this.first + " " + this.last;
+            }
+            
+            alert(someCustomer.city);
+            alert(someCustomer.eMail);
+            alert(someCustomer.fullName());
+
+
+    </script>
+</body>
+</html>

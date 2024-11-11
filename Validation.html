@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Enter a number</p>
+    <input id="numberBox" type="number" min="1" max="100">
+    <button onclick="validate()">Send</button>
+    <p id="demo"></p>
+    
+    <script>
+        function validate()
+        {
+            var numberEntered = document.getElementById("numberBox");
+
+            if (numberEntered.checkValidity() == false)
+{
+    document.getElementById("demo").innerHTML = numberEntered.validationMessage;
+}
+else 
+{
+    document.getElementById("demo").innerHTML = "Input OK";
+}
+
+        }
+
+
+    </script>
+</body>
+</html>
